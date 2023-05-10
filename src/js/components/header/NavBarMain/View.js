@@ -1,10 +1,3 @@
-import {
-  addressModal,
-  loginModal,
-  welcomeModal,
-  searchBarModal,
-} from "./partials/modals.js";
-
 export class NavMainView {
   constructor() {
     this.navBarMain = this.createNavBarMainElement();
@@ -54,30 +47,5 @@ export class NavMainView {
       </div>
     `;
     return navBarMain;
-  }
-
-  createWelcomeModalElement() {
-    const welcomeModalElement = document.createElement("div");
-    welcomeModalElement.classList.add("welcome-modal");
-    welcomeModalElement.innerHTML = `${welcomeModal.template()}`;
-    return welcomeModalElement;
-  }
-
-  createAddressModalElement() {
-    const addressModalElement = document.createElement("div");
-    addressModalElement.classList.add("address-modal");
-    addressModalElement.innerHTML = `${addressModal.template()}`;
-    return addressModalElement;
-  }
-
-  createLoginModalElement() {
-    const loginModalElement = document.createElement("div");
-    loginModalElement.classList.add("login-modal");
-    loginModalElement.innerHTML = `${loginModal.template()}`;
-    return loginModalElement;
-  }
-
-  renderSearchBarModalElement(state) {
-    return `${searchBarModal.template(state)}`;
   }
 }
